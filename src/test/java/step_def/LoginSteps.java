@@ -49,8 +49,8 @@ public class LoginSteps extends DriverManager {
 
     @Then("the user provided right user name and password")
     public void the_user_provide_right_username_password() {
-        loginPage.correctUserName();
-        loginPage.enterPassword();
+        loginPage.enterWrongUserName();
+        loginPage.correctUserPassword();
     }
 
     @Then("user is taken to the news page")

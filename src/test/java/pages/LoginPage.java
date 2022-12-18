@@ -6,20 +6,20 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends DriverManager {
 
-    @FindBy(id="username")
-    private WebElement userNameInputText;
+    @FindBy(id="password")
+    private WebElement PasswordinputText;
 
     @FindBy(id="login_button")
     private WebElement loginButton;
 
-    @FindBy(id = "Password")
-    private WebElement passwordInputText;
+    @FindBy(id = "username")
+    private WebElement UserInputText;
 
     @FindBy(id="username-helper-text")
     private WebElement errorMarker;
 
     public boolean userNameVisible(){
-       return userNameInputText.isDisplayed();
+       return UserInputText.isDisplayed();
     }
 
     public boolean loginButtonDisplayed() {
@@ -27,13 +27,13 @@ public class LoginPage extends DriverManager {
     }
 
     public void enterWrongUserName() {
-        waitUntilElementIsClickable(userNameInputText);
-        userNameInputText.sendKeys("kevinPatel");
+        waitUntilElementIsClickable(UserInputText);
+        UserInputText.sendKeys("kevinPatel");
     }
 
     public void enterPassword() {
-        waitUntilElementIsClickable(passwordInputText);
-        passwordInputText.sendKeys("pa55word@");
+        waitUntilElementIsClickable(PasswordinputText);
+        PasswordinputText.sendKeys("pa55word@");
     }
 
     public void clickLoginInButton() {
@@ -45,8 +45,8 @@ public class LoginPage extends DriverManager {
         return errorMarker.isDisplayed();
     }
 
-    public void correctUserName() {
-       userNameInputText.sendKeys("pa55word");
+    public void correctUserPassword() {
+       PasswordinputText.sendKeys("pa55word");
     }
 
 

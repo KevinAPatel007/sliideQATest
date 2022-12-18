@@ -3,10 +3,12 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources",
+@CucumberOptions(features = "/Users/kevinpatel/Downloads/technical_task_qa_web-master/src/test/resources",
         dryRun = false,
         strict = true,
-        tags = "@Login",
+
+        tags= "@login"
+        ,
         plugin = "json:target/cucumber-report/cucumber.json")
 public class RunCukesTest {
      // a json report is generated as target/cucumber-report
